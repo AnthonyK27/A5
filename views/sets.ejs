@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <%- include('partials/navbar',{page:'/lego/sets'}) %>
+    <div class="container mx-auto p-4">
+        <div class="hero bg-base-200 rounded-lg p-6">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-5xl font-bold">Collection</h1>
+              <p class="py-6">Browse the collection. Click to filter by a specific theme:
+                <a class="btn btn-primary btn-xs" href="/lego/sets?theme=Bionicle">Bionicle</a>
+                <a class="btn btn-primary btn-xs" href="/lego/sets?theme=Expert Builder">Expert Builder</a>
+                <a class="btn btn-primary btn-xs" href="/lego/sets?theme=NXT">NXT</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-x-auto overflow-y-hidden">
+          <table class=" table table-zebra">
+            <tbody>
+              <% sets.forEach(set=>{ %>
+              <tr>
+                  <td>
+                      <div class="avatar">
+                      <div class="w-32 h-32 rounded-lg bg-no-repeat bg-cover">
+                        <img src=<%=set.img_url%>>
+                      </div>
+                    </div></td>
+                    <td>
+                      <%=set.name%> | 
+                      <a class="btn btn-xs" href="/lego/sets?theme=<%=set.Theme.name%>"><%=set.Theme.name%></a>
+                    </td>
+                    <td>
+                      <span class="font-bold">Year:</span>
+                      <%=set.year%>
+                      <span class="font-bold"> -Parts:</span>
+                      <%=set.num_parts%>
+                    </td>
+                    <td>
+                      <a class="btn btn-xs" href="/lego/sets/<%=set.set_num%>">DETAILS</a>
+                    </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</body>
+</html>

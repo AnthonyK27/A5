@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <%- include('partials/navbar', {page: '/about'}) %>
+      <div class="container mx-auto">
+        <div class="hero bg-base-200 rounded-lg p-6">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-5xl font-bold">About Me</h1>
+              <p class="py-6">Information about the developer and designer of this webpage. A quick bio and details about myself.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img class="w-full rounded-lg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/WC_McBrien_Building_-_TTC.jpg/1200px-WC_McBrien_Building_-_TTC.jpg?20080522143600" alt="profile">
+  
+        </div>
+        <div class="prose">
+  
+          <p>My name is Anthony Korepanov and I am studying computer programming at Seneca Polytechnic.</p>
+  
+          <p>I have been working on developing web applications such as this one as part of my web curriculum for the  
+            summer 2024 term. Alongside web I am also working with C++ to build object-oriented applications. Outside 
+            of school I apply my knowledge of C++ towards computer graphics programming and large graphics engine
+            applications. I am also passionate about astronomy and astrophysics and would like to pursue a software
+            project related to simulating the solar system. This year I am beginning a co-op as a programmer analyst 
+            at TTC. The head office can be seen in the image on the left.
+          </p>
+  
+        </div>
+  
+      </div>
+</body>
+</html>
